@@ -15,8 +15,6 @@ test('should get correct response from API and export to Excel', async ({ reques
     // ตรวจสอบความยาวของ responseBody และ data
     expect(responseBody.length).toBe(data.length);
 
-    let containsExpectedText = false;
-
     responseBody.forEach((item, index) => {
         if (data[index]) {
             expect(item.userId).toBe(data[index].userId);
